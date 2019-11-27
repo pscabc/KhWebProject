@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--반응형-->
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,800&display=swap&subset=korean" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/header/style.css">
+	<link rel="stylesheet" href="/css/header/responsive.css">
+	<script type="text/javascript" src="/js/bootstrap.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<title>Insert title here</title>
+</head>
+
+
+
+<body>
+<style>
+    @media (max-width: 850px) {
+        header {
+            flex-direction: column;
+            
+        }
+    }
+
+    * {
+        font-family: 'Nanum Gothic', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    header {
+
+        position: fixed;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #ffffff;
+        padding: 0px 50px 0;
+        font-size: 22px;
+        z-index: 5;
+        background-color: #000000;
+    }
+
+    header img {
+        width: 170px;
+        height: 100px;
+
+    }
+
+    #header_nav {
+        display: flex;
+    }
+    .header_a {
+
+        text-decoration: none;
+        color: #ffffff;
+        cursor: pointer;
+
+    }
+
+    #header_ul {
+        display: flex;
+
+    }
+
+    #header_ul,
+    #header_ul2 {
+        list-style: none;
+        text-align: center;
+    }
+
+    .header_li {
+        line-height: 70px;
+        height: 70px;
+        width: 130px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .header_li:hover {
+
+        font-weight: bold;
+        border-bottom: 1.5px solid #CE6D39;
+        transition-duration: 0.5s;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+    }
+    .header_li:nth-child(1)>a{
+        color: #F17F42;
+    }
+    }
+    .header_li:nth-child(3):hover {
+
+        border-bottom: none;
+
+    }
+
+    .header_li:hover li {
+        opacity: 1;
+        transition-duration: 1s;
+        background-color: #000000;
+        border-bottom: 1.5px solid #CE6D39;
+        font-weight: bold;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .header_li:hover li>a {
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+    .header_li2 {
+        opacity: 0;
+        transition-duration: 1s;
+    }
+
+</style>
+
+<header>
+        <span id="header_span"><a href="index.jsp" class="header_a">
+                <img src="../../../img/adminLogo.JPG"></a></span>
+        <nav id="header_nav">
+            <ul id="header_ul">
+                <li class="header_li"><a href="#" class="header_a">추천 여행지</a></li>
+                <li class="header_li"><a href="#" class="header_a">여행담기</a></li>
+                <li class="header_li">
+                    <a href="#" class="header_a">게시판</a>
+                    <ul id="header_ul2">
+                        <li class="header_li2"><a href="#" class="header_a">계획작성</a></li>
+                        <li class="header_li2"><a href="#" class="header_a">리뷰작성</a></li>
+                    </ul>
+                </li>
+                <li class="header_li"><a href="#" class="header_a">회원관리</a></li>
+                <li class="header_li"><a href="#" class="header_a">로그아웃</a></li>
+            </ul>
+        </nav>
+    </header>
+<style>
+    .photo_table{
+        padding-top: 200px;
+    }
+    .photo_table a{
+        float: right;
+    }
+    .photo_table a:hover{
+        color: #CE6D39;
+    }
+    .photo_table td{
+        height: 100px;
+    }
+</style>
+    <section>
+        <div class="photo_table" style="text-align: center; width: 65%; margin: 0 auto;">
+            <table class="table table-striped table-bordered  table-hover" style="border: 3px solid grey;">
+                   <a type="summit" class="btn btn-dark" href="../../../views/adminPhoto/adminPhoto.jsp">글쓰기</a>
+                    <tr class="table-dark">
+                        <th colspan="3" style="font-size: 20px; font-weight: bold; color: black;" class="thead-inverse">관리자 추천<br>여행지 목록</th>
+                    </tr>
+                    <tr>
+                        <th style="width: 50px;">번호</th>
+                        <th style="width: 150px;">이미지</th>
+                        <th style="width: 150px;">내용(지명)</th>
+                    </tr>
+                    <tr>    
+                        <td><img src="../../../upload/adminPhoto/yeodamLogo.png">/td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+          
+        </div>
+    </section>
+
+</body>
+</html>
